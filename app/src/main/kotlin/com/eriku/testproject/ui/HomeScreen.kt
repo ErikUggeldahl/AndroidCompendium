@@ -1,5 +1,7 @@
 package com.eriku.testproject.ui
 
+import android.util.Log
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -12,9 +14,11 @@ import com.eriku.testproject.R
 @OptIn(ExperimentalAssetLoader::class)
 @Composable
 fun HomeScreen(
+    modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(),
 ) {
     AndroidView(
+        modifier = modifier,
         factory = { context ->
             RiveAnimationView(context).apply {
                 setRiveResource(
@@ -24,8 +28,8 @@ fun HomeScreen(
         },
     )
     if (viewModel.uiState.entries.isNotEmpty()) {
-        Text(text = viewModel.uiState.entries[0].name, modifier = Modifier)
+        Text(text = viewModel.uiState.entries[0].name, modifier = modifier)
     } else {
-        Text(text = "No entries", modifier = Modifier)
+        Text(text = "No entries", modifier = modifier)
     }
 }

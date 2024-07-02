@@ -26,7 +26,7 @@ class HomeViewModel @Inject constructor(
         getAllEntries()
     }
 
-    fun getAllEntries() {
+    private fun getAllEntries() {
         fetchJob?.cancel()
         fetchJob = viewModelScope.launch {
             try {

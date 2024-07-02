@@ -8,4 +8,5 @@ data class CompendiumEntry(
     val id: UInt,
     val name: String,
     val category: String,
+    val description: String,
 )
