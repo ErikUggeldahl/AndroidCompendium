@@ -15,7 +15,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import app.rive.runtime.kotlin.RiveAnimationView
 import app.rive.runtime.kotlin.core.ExperimentalAssetLoader
 import com.eriku.testproject.ui.theme.TestProjectTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalAssetLoader::class)
     override fun onCreate(savedInstanceState: Bundle?) {

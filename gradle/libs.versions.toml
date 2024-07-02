@@ -12,6 +12,8 @@ composeBom = "2024.04.01"
 startup = "1.1.1"
 rive = "8.7.0"
 
+hilt = "2.51.1"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -31,7 +33,13 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-startup = { group = "androidx.startup", name = "startup-runtime", version.ref = "startup" }
 rive = { group = "app.rive", name = "rive-android", version.ref = "rive" }
 
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-kapt = { id = "kotlin-kapt" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
